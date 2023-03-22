@@ -1,0 +1,8 @@
+.sale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(85, 173, 173);
+  padding: 10px;
+  border-radius: 10px;
+}

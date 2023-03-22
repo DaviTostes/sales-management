@@ -17,12 +17,12 @@ const SalesCard = () => {
   const handleSaveSale = () => {
     const input = document.querySelector<HTMLElement>('.input')
     let newSale = {
-      clientName: input?.children[0].value, 
-      value: input?.children[1].value, 
-      date: input?.children[2].value, 
-      contact: input?.children[3].value,
+      clientName: (input?.children[0] as HTMLInputElement).value, 
+      value: parseFloat((input?.children[1] as HTMLInputElement).value), 
+      date: (input?.children[2] as HTMLInputElement).value, 
+      contact: (input?.children[3] as HTMLInputElement).value,
     }
-    setSales([...sales, newSale])
+    setSales([newSale, ...sales])
 
     handleChangeDisplay('none')
   }
@@ -32,13 +32,13 @@ const SalesCard = () => {
   }, [])
 
   return (
-    <div className="sales">
+    <div className="salesCard">
       <div className="input-wrapper">
         <button onClick={handleAddNewSale}>Add new sale</button>
         <div className="input">
-          <input type="text" placeholder='Client name' id='clientName' />
-          <input type="number" placeholder='Value' id='value' />
-          <input type="date" id='date' />
+          <input type="text" placeholder='Client name' id='clientName' required />
+          <input type="number" placeholder='Value' id='value' required />
+          <input type="date" id='date' required />
           <input type="text" placeholder='contact' id='contact' />
           <button onClick={handleSaveSale}>Submit</button>
         </div>
@@ -51,7 +51,6 @@ const SalesCard = () => {
             value={sale.value}
             date={sale.date}
             contact={sale.contact}
-            id={index}
           />)}
       </div>
     </div>

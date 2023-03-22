@@ -1,12 +1,12 @@
 import './styles.css'
 
-const Sale = ({clientName, value, date, contact, id}: {clientName: string, value: number, date: string, contact: string, id: number}) => {
+const Sale = ({clientName, value, date, contact}: {clientName: string, value: number, date: string, contact: string}) => {
   return (
     <div className="sale">
-      <p className="client-name">{clientName}</p>
-      <p className="value">{value}</p>
+      <p className="client-name">Name: {clientName}</p>
+      <p className="value">{value.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}</p>
       <p className="date">{date}</p>
-      <p className="contact">{contact}</p>
+      <p className="contact">Contact: {contact}</p>
     </div>
   )
 }
