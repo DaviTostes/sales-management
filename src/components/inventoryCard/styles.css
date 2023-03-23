@@ -1,0 +1,46 @@
+.inventoryCard {
+  padding: 20px;
+}
+
+.inventoryCard .input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.inventoryCard .input-wrapper button {
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.inventoryCard .input-wrapper button:hover {
+  filter: brightness(0.8);
+}
+
+.inventoryCard .input-wrapper button:active {
+  filter: brightness(0.5);
+}
+
+.inventoryCard .input {
+  position: absolute;
+  transform: translate(10%, 120px);
+  padding: 10px;
+
+  background-color: rgb(0, 53, 128);
+  border-radius: 10px;
+}
+
+.inventoryCard .input input {
+  margin-right: 5px;
+}
+
+.inventoryCard .input button {
+  font-size: 12px;
+}
+
+.inventoryCard .output-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

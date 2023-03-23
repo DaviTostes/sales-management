@@ -2,27 +2,27 @@
   padding: 20px;
 }
 
-.input-wrapper {
+.salesCard .input-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-.input-wrapper button {
+.salesCard .input-wrapper button {
   padding: 5px;
   border: none;
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
-.input-wrapper button:hover {
+.salesCard .input-wrapper button:hover {
   filter: brightness(0.8);
 }
 
-.input-wrapper button:active {
+.salesCard .input-wrapper button:active {
   filter: brightness(0.5);
 }
 
-.input {
+.salesCard .input {
   position: absolute;
   transform: translate(10%, 120px);
   padding: 10px;
@@ -31,15 +31,15 @@
   border-radius: 10px;
 }
 
-.input input {
+.salesCard .input input {
   margin-right: 5px;
 }
 
-.input button {
+.salesCard .input button {
   font-size: 12px;
 }
 
-.output-wrapper {
+.salesCard .output-wrapper {
   display: flex;
   flex-direction: column;
   gap: 10px;
